@@ -8,8 +8,8 @@
 <h1 align="center"> Overview </h1>
 This project was an attempt to create a cross platform game engine that would work on Windows, Linux and MacOS. It was created during the time of the Covid19 Pandemic in 2020.
 
- - For a full breakdown of progress and future work visit the project page [HERE]()
+ - For a full breakdown of progress and future work visit the project page [HERE](https://github.com/ChrisHargrove/Covid-Engine/projects/1)
 
- - To submit bug reports and feature suggestions, or to track changes visit the issues page [HERE]()
+ - To submit bug reports and feature suggestions, or to track changes visit the issues page [HERE](https://github.com/ChrisHargrove/Covid-Engine/issues)
 
 ***
