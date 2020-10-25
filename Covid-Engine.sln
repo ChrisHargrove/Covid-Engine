@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Covid-Engine", "Covid-Engine\Covid-Engine.vcxproj", "{9DA3181A-8906-A8BE-328C-E0741ECE7341}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quarantine", "Quarantine\Quarantine.vcxproj", "{FD7C9270-E934-D4BD-523C-AD193E136FAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DA3181A-8906-A8BE-328C-E0741ECE7341}.Debug|x64.ActiveCfg = Debug|x64
+		{9DA3181A-8906-A8BE-328C-E0741ECE7341}.Debug|x64.Build.0 = Debug|x64
+		{9DA3181A-8906-A8BE-328C-E0741ECE7341}.Release|x64.ActiveCfg = Release|x64
+		{9DA3181A-8906-A8BE-328C-E0741ECE7341}.Release|x64.Build.0 = Release|x64
+		{FD7C9270-E934-D4BD-523C-AD193E136FAE}.Debug|x64.ActiveCfg = Debug|x64
+		{FD7C9270-E934-D4BD-523C-AD193E136FAE}.Debug|x64.Build.0 = Debug|x64
+		{FD7C9270-E934-D4BD-523C-AD193E136FAE}.Release|x64.ActiveCfg = Release|x64
+		{FD7C9270-E934-D4BD-523C-AD193E136FAE}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
