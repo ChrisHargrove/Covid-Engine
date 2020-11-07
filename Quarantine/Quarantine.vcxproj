@@ -41,15 +41,15 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug-windows-\Quarantine\</OutDir>
-    <IntDir>..\bin-int\Debug-windows-\Quarantine\</IntDir>
+    <OutDir>..\bin\Debug-windows-x86_64\Quarantine\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\Quarantine\</IntDir>
     <TargetName>Quarantine</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-windows-\Quarantine\</OutDir>
-    <IntDir>..\bin-int\Release-windows-\Quarantine\</IntDir>
+    <OutDir>..\bin\Release-windows-x86_64\Quarantine\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86_64\Quarantine\</IntDir>
     <TargetName>Quarantine</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
@@ -89,6 +89,9 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Quarantine.cpp" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Covid-Engine\Covid-Engine.vcxproj">
       <Project>{9DA3181A-8906-A8BE-328C-E0741ECE7341}</Project>

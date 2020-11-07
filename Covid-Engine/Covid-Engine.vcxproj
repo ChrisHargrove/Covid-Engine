@@ -40,14 +40,14 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\bin\Debug-windows-\Covid-Engine\</OutDir>
-    <IntDir>..\bin-int\Debug-windows-\Covid-Engine\</IntDir>
+    <OutDir>..\bin\Debug-windows-x86_64\Covid-Engine\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\Covid-Engine\</IntDir>
     <TargetName>Covid-Engine</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\bin\Release-windows-\Covid-Engine\</OutDir>
-    <IntDir>..\bin-int\Release-windows-\Covid-Engine\</IntDir>
+    <OutDir>..\bin\Release-windows-x86_64\Covid-Engine\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86_64\Covid-Engine\</IntDir>
     <TargetName>Covid-Engine</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
@@ -87,6 +87,14 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Core\Application.h" />
+    <ClInclude Include="src\Core\EntryPoint.h" />
+    <ClInclude Include="src\Covid.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Core\Application.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

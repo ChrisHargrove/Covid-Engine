@@ -2,7 +2,7 @@ workspace "Covid-Engine"
     architecture "x64"
     configurations { "Debug", "Release"}
 
-OutputDirectory = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architexture}"
+OutputDirectory = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Covid Engine Project Setup
 project "Covid-Engine"
