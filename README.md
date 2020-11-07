@@ -15,4 +15,5 @@ This project was an attempt to create a cross platform game engine that would wo
 ***
 
 <h1 align="center"> Technologies </h1>
+
  - Logging: [spdlog](https://github.com/gabime/spdlog)
