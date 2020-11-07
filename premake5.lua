@@ -21,7 +21,7 @@ project "Covid-Engine"
     }
 
     includedirs {
-        ""
+        "%{prj.name}/infected/spdlog/include"
     }
 
     filter "configurations:Debug"
