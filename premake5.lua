@@ -50,6 +50,7 @@ project "Quarantine"
     }
 
     includedirs {
+        "Covid-Engine/infected/spdlog/include",
         "Covid-Engine/src"
     }
 

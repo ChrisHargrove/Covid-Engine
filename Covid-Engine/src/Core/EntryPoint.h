@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Logger.h"
 #include "Application.h"
 
 /* ----------------------------------------------------------------------------
@@ -24,9 +25,17 @@ extern Covid::Application* Covid::CreateApplication();
 ---------------------------------------------------------------------------- */
 int main(int argc, char** argv)
 {
+    Covid::Logger::Init();
+
+    Covid::Logger::EngineCritical("Testing basic logging");
+    Covid::Logger::EngineCritical("Testing param logging {}", 500);
+
+
     auto app = Covid::CreateApplication();
     app->Run();
     delete app;
+
+    Covid::Logger::Terminate();
 
     return 0;
 }
