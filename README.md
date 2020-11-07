@@ -13,3 +13,6 @@ This project was an attempt to create a cross platform game engine that would wo
  - To submit bug reports and feature suggestions, or to track changes visit the issues page [HERE](https://github.com/ChrisHargrove/Covid-Engine/issues)
 
 ***
+
+<h1 align="center"> Technologies </h1>
+ - Logging: [spdlog](https://github.com/gabime/spdlog)
