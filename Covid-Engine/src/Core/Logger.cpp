@@ -17,12 +17,12 @@ namespace Covid
        std::shared_ptr<FileSink> filesink = std::make_shared<FileSink>("logs/covid.log");
        spdlog::flush_every(std::chrono::seconds(5));
 
-       s_EngineLogger = spdlog::stdout_color_mt("COVID");
+       s_EngineLogger = spdlog::stdout_color_mt("ENGINE");
        s_EngineLogger->sinks().push_back(filesink);
        s_EngineLogger->set_level(spdlog::level::trace);
        s_EngineLogger->set_pattern("%^[%T] %n: %v%$");
 
-       s_Logger = spdlog::stdout_color_mt("INFECTED");
+       s_Logger = spdlog::stdout_color_mt("CLIENT");
        s_Logger->sinks().push_back(filesink);
        s_Logger->set_level(spdlog::level::trace);
        s_Logger->set_pattern("%^[%T] %n: %v%$");

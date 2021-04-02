@@ -21,7 +21,20 @@ project "Covid-Engine"
     }
 
     includedirs {
-        "%{prj.name}/infected/spdlog/include"
+        "C:/VulkanSDK/1.2.170.0/Include",
+        "%{prj.name}/infected/spdlog/include",
+        "%{prj.name}/infected/glfw-3.3.3/include",
+        "%{prj.name}/infected/glm/glm"
+    }
+
+    libdirs {
+        "C:/VulkanSDK/1.2.170.0/Lib",
+        "%{prj.name}/infected/glfw-3.3.3/bin"
+    }
+
+    links {
+        "vulkan-1.lib",
+        "glfw3_mt.lib"
     }
 
     filter "configurations:Debug"
@@ -50,11 +63,22 @@ project "Quarantine"
     }
 
     includedirs {
+        "C:/VulkanSDK/1.2.170.0/Include",
         "Covid-Engine/infected/spdlog/include",
+        "Covid-Engine/infected/glfw-3.3.3/include",
+        "Covid-Engine/infected/glm/glm",
+
         "Covid-Engine/src"
     }
 
+    libdirs {
+        "C:/VulkanSDK/1.2.170.0/Lib",
+        "Covid-Engine/infected/glfw-3.3.3/bin"
+    }
+
     links {
+        "vulkan-1.lib",
+        "glfw3_mt.lib",
         "Covid-Engine"
     }
 
