@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Window/Window.h"
+
 namespace Covid
 {
     class Application
@@ -8,7 +10,14 @@ namespace Covid
         Application();
         virtual ~Application();
 
-        void Run();
+        virtual void Init() = 0;
+
+        virtual void Run() = 0;
+
+        virtual void Shutdown() = 0;
+
+    protected:
+        Window* window;
     };
 
     //To be defined by the user.
