@@ -1,6 +1,3 @@
-[submodule "Covid-Engine/infected/spdlog"]
-	path = "Covid-Engine/infected/spdlog
-	url = https://github.com/gabime/spdlog
 [submodule "Covid-Engine/infected/glm"]
 	path = Covid-Engine/infected/glm
 	url = https://github.com/g-truc/glm.git
