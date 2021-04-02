@@ -4,6 +4,9 @@
     <Filter Include="Core">
       <UniqueIdentifier>{2EB4837C-1AEB-840D-C3D7-6A10AFED000F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Window">
+      <UniqueIdentifier>{d6915d2f-63f9-45cb-971b-4611d2282ab0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\Application.h">
@@ -16,6 +19,12 @@
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Covid.h" />
+    <ClInclude Include="src\Core\Window\Window.h">
+      <Filter>Core\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Window\WindowBuilder.h">
+      <Filter>Core\Window</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp">
@@ -23,6 +32,9 @@
     </ClCompile>
     <ClCompile Include="src\Core\Logger.cpp">
       <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Window\WindowBuilder.cpp">
+      <Filter>Core\Window</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

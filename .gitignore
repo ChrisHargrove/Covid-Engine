@@ -348,3 +348,6 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+
+# Third Party Ignores
+Covid-Engine/infected/glfw-3.3.3/docs
