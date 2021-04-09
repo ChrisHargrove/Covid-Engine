@@ -1,5 +1,8 @@
 #include <Covid.h>
 
+//TEMP
+#include "GLFW/glfw3.h"
+
 using namespace Covid;
 
 class Quarantine: public Covid::Application
@@ -16,11 +19,22 @@ public:
     virtual void Init()
     {
         Window::Init();
-        window = Window::Create()
+        m_window = Window::Create()
             .SetWidth(800)
             .SetHeight(600)
             .SetTitle("Fluent Window")
             .Build();
+
+        m_input = Input::Create()
+            .SetWindow(m_window)
+            .Build();
+
+        m_input->OnKeyEvent.Subscribe("Test Key", [](Covid::KeyEvent evt) {
+            if(evt.GetKeyCode() == KeyCode::E)
+            {
+                Logger::EngineDebug("Key Pressed Callback");
+            }
+        });
 
     }
 
@@ -28,9 +42,11 @@ public:
     {
         Init();
 
-        while (!Window::ShouldClose(window))
+        while (!Window::ShouldClose(m_window))
         {
-            glfwPollEvents();
+            m_input->Poll();
+
+
         }
 
         Shutdown();
@@ -39,7 +55,7 @@ public:
     virtual void Shutdown()
     {
 
-        delete window;
+        delete m_window;
         Window::Shutdown();
     }
 

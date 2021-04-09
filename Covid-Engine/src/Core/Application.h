@@ -17,7 +17,8 @@ namespace Covid
         virtual void Shutdown() = 0;
 
     protected:
-        Window* window;
+        Window* m_window;
+        Input* m_input;
     };
 
     //To be defined by the user.

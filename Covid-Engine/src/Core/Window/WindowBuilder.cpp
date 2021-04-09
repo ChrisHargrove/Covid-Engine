@@ -63,14 +63,14 @@ namespace Covid
         m_window = new Window();
         if (m_isFullScreen)
         {
-            m_window->window = glfwCreateWindow(m_width, m_height, m_title.c_str(), glfwGetPrimaryMonitor(), nullptr);
+            m_window->m_window = glfwCreateWindow(m_width, m_height, m_title.c_str(), glfwGetPrimaryMonitor(), nullptr);
         }
         else
         {
-            m_window->window = glfwCreateWindow(m_width, m_height, m_title.c_str(), nullptr, nullptr);
+            m_window->m_window = glfwCreateWindow(m_width, m_height, m_title.c_str(), nullptr, nullptr);
         }
 
-        if (!m_window->window)
+        if (!m_window->m_window)
         {
             Logger::EngineError("Window Creation Failed!");
             delete m_window;

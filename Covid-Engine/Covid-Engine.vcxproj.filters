@@ -7,6 +7,12 @@
     <Filter Include="Core\Window">
       <UniqueIdentifier>{d6915d2f-63f9-45cb-971b-4611d2282ab0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Input">
+      <UniqueIdentifier>{5a2af82d-d7e1-44f2-85f0-c1a51df6530a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Utilities">
+      <UniqueIdentifier>{03934f41-514a-4d2e-a76d-adbebfe030da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\Application.h">
@@ -25,6 +31,21 @@
     <ClInclude Include="src\Core\Window\WindowBuilder.h">
       <Filter>Core\Window</Filter>
     </ClInclude>
+    <ClInclude Include="src\Core\Input\Input.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Input\InputBuilder.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Input\InputEvents.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Input\KeyCodes.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities\Action.h">
+      <Filter>Core\Utilities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp">
@@ -38,6 +59,12 @@
     </ClCompile>
     <ClCompile Include="src\Core\Window\Window.cpp">
       <Filter>Core\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Input\Input.cpp">
+      <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Input\InputBuilder.cpp">
+      <Filter>Core\Input</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

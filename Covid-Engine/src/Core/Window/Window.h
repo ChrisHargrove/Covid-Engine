@@ -5,12 +5,14 @@
 
 #include "../Logger.h"
 #include "WindowBuilder.h"
+#include "../Input/InputBuilder.h"
 
 namespace Covid
 {
     class Window
     {
         friend WindowBuilder;
+        friend InputBuilder;
     
     private:
         Window();
@@ -36,7 +38,7 @@ namespace Covid
 
 
     private:
-        GLFWwindow* window;
+        GLFWwindow* m_window;
 
     };
 

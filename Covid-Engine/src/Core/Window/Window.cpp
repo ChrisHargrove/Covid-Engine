@@ -3,13 +3,13 @@
 namespace Covid
 {
     Window::Window() :
-        window(nullptr)
+        m_window(nullptr)
     {
     }
 
     Window::~Window()
     {
-        if (window) glfwDestroyWindow(window);
+        if (m_window) glfwDestroyWindow(m_window);
     }
 
 #pragma region Static Methods
@@ -40,7 +40,7 @@ namespace Covid
     {
         if (instance)
         {
-            return glfwWindowShouldClose(instance->window);
+            return glfwWindowShouldClose(instance->m_window);
         }
         else
         {
@@ -58,12 +58,12 @@ namespace Covid
 
     void Window::SetSize(int width, int height)
     {
-        glfwSetWindowSize(window, width, height);
+        glfwSetWindowSize(m_window, width, height);
     }
 
     void Window::GetSize(int* width, int* height)
     {
-        glfwGetWindowSize(window, width, height);
+        glfwGetWindowSize(m_window, width, height);
     }
 
 
