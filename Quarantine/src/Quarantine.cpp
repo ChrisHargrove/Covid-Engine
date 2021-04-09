@@ -29,6 +29,8 @@ public:
             .SetWindow(m_window)
             .Build();
 
+        m_time = new Time();
+
         m_input->OnKeyEvent.Subscribe("Test Key", [](Covid::KeyEvent evt) {
             if(evt.GetKeyCode() == KeyCode::E)
             {
@@ -38,18 +40,9 @@ public:
 
     }
 
-    virtual void Run()
+    virtual void Update()
     {
-        Init();
-
-        while (!Window::ShouldClose(m_window))
-        {
-            m_input->Poll();
-
-
-        }
-
-        Shutdown();
+        Logger::EngineInfo("Delta Time: {0:.8f}", m_time->GetDeltaTime());
     }
 
     virtual void Shutdown()

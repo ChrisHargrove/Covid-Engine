@@ -46,6 +46,12 @@
     <ClInclude Include="src\Utilities\Action.h">
       <Filter>Core\Utilities</Filter>
     </ClInclude>
+    <ClInclude Include="src\Core\Input\ButtonCodes.h">
+      <Filter>Core\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities\Time.h">
+      <Filter>Core\Utilities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp">

@@ -98,6 +98,7 @@
   <ItemGroup>
     <ClInclude Include="src\Core\Application.h" />
     <ClInclude Include="src\Core\EntryPoint.h" />
+    <ClInclude Include="src\Core\Input\ButtonCodes.h" />
     <ClInclude Include="src\Core\Input\Input.h" />
     <ClInclude Include="src\Core\Input\InputBuilder.h" />
     <ClInclude Include="src\Core\Input\InputEvents.h" />
@@ -107,6 +108,7 @@
     <ClInclude Include="src\Core\Window\WindowBuilder.h" />
     <ClInclude Include="src\Covid.h" />
     <ClInclude Include="src\Utilities\Action.h" />
+    <ClInclude Include="src\Utilities\Time.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp" />

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "KeyCodes.h"
+#include "ButtonCodes.h"
 
 namespace Covid
 {
