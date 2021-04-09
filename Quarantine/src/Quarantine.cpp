@@ -31,18 +31,15 @@ public:
 
         m_time = new Time();
 
-        m_input->OnKeyEvent.Subscribe("Test Key", [](Covid::KeyEvent evt) {
-            if(evt.GetKeyCode() == KeyCode::E)
-            {
-                Logger::EngineDebug("Key Pressed Callback");
-            }
-        });
-
     }
 
     virtual void Update()
     {
-        Logger::EngineInfo("Delta Time: {0:.8f}", m_time->GetDeltaTime());
+        Logger::EngineTrace("Delta Time: {0:.20f}", m_time->GetDeltaTime());
+    }
+
+    virtual void FixedUpdate()
+    {
     }
 
     virtual void Shutdown()

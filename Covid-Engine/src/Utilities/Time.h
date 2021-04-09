@@ -25,7 +25,7 @@ namespace Covid
 		{
 			high_resolution_clock::time_point currentTimePoint = high_resolution_clock::now();
 			m_timeSinceStartup = std::chrono::duration_cast<std::chrono::duration<long>>(currentTimePoint - m_appStartTime).count();
-			m_deltaTime = std::chrono::duration_cast<std::chrono::milliseconds>(currentTimePoint - m_previousFrameStartTime).count();
+			m_deltaTime = std::chrono::duration_cast<std::chrono::duration<float>>(currentTimePoint - m_previousFrameStartTime).count();
 			m_previousFrameStartTime = currentTimePoint;
 		}
 

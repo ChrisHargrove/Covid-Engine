@@ -16,6 +16,7 @@ namespace Covid
         void Run();
 
         virtual void Update() = 0;
+        virtual void FixedUpdate() = 0;
 
         virtual void Shutdown() = 0;
 
