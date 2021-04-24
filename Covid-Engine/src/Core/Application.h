@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Window/Window.h"
+#include "Graphics/Device.h"
 #include "../Utilities/Time.h"
 
 namespace Covid
@@ -24,6 +25,8 @@ namespace Covid
         Window* m_window;
         Input* m_input;
         Time* m_time;
+
+        Graphics::Device* m_device;
     };
 
     //To be defined by the user.

@@ -10,3 +10,6 @@
 #include "Core/Input/InputBuilder.h"
 #include "Core/Input/KeyCodes.h"
 #include "Core/Input/ButtonCodes.h"
+
+#include "Core/Graphics/Utils.h"
+#include "Core/Graphics/Device.h"

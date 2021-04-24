@@ -13,6 +13,9 @@
     <Filter Include="Core\Utilities">
       <UniqueIdentifier>{03934f41-514a-4d2e-a76d-adbebfe030da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Graphics">
+      <UniqueIdentifier>{678b45fc-c92c-424e-85bc-dd3b740e135f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\Application.h">
@@ -52,6 +55,15 @@
     <ClInclude Include="src\Utilities\Time.h">
       <Filter>Core\Utilities</Filter>
     </ClInclude>
+    <ClInclude Include="src\Core\Graphics\Utils.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Graphics\Device.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Graphics\DeviceBuilder.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp">
@@ -71,6 +83,12 @@
     </ClCompile>
     <ClCompile Include="src\Core\Input\InputBuilder.cpp">
       <Filter>Core\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Graphics\Device.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Graphics\DeviceBuilder.cpp">
+      <Filter>Core\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

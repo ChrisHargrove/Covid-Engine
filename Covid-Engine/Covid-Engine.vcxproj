@@ -98,6 +98,9 @@
   <ItemGroup>
     <ClInclude Include="src\Core\Application.h" />
     <ClInclude Include="src\Core\EntryPoint.h" />
+    <ClInclude Include="src\Core\Graphics\Device.h" />
+    <ClInclude Include="src\Core\Graphics\DeviceBuilder.h" />
+    <ClInclude Include="src\Core\Graphics\Utils.h" />
     <ClInclude Include="src\Core\Input\ButtonCodes.h" />
     <ClInclude Include="src\Core\Input\Input.h" />
     <ClInclude Include="src\Core\Input\InputBuilder.h" />
@@ -112,6 +115,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp" />
+    <ClCompile Include="src\Core\Graphics\Device.cpp" />
+    <ClCompile Include="src\Core\Graphics\DeviceBuilder.cpp" />
     <ClCompile Include="src\Core\Input\Input.cpp" />
     <ClCompile Include="src\Core\Input\InputBuilder.cpp" />
     <ClCompile Include="src\Core\Logger.cpp" />

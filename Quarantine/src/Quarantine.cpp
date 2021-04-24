@@ -29,13 +29,19 @@ public:
             .SetWindow(m_window)
             .Build();
 
+        m_device = Graphics::Device::Create()
+            .SetWindow(m_window)
+            .SetApplicationName("Fluent Window")
+            .SetApplicationVersion(0, 0, 1)
+            .SetShowDeviceInfo(true)
+            .Build();
+
         m_time = new Time();
 
     }
 
     virtual void Update()
     {
-        Logger::EngineTrace("Delta Time: {0:.20f}", m_time->GetDeltaTime());
     }
 
     virtual void FixedUpdate()
@@ -44,9 +50,13 @@ public:
 
     virtual void Shutdown()
     {
+        delete m_time;
 
+        delete m_device;
+
+        delete m_input;
         delete m_window;
-        Window::Shutdown();
+        Window::Shutdown(); 
     }
 
 };

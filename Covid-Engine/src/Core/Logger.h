@@ -47,6 +47,7 @@ namespace Covid
         inline static void EngineCritical(const Format& fmt, TArgs&& ...args)
         {
             s_EngineLogger->critical(fmt, args...);
+            throw std::runtime_error("Engine encountered critical error! See logs for details...");
         }
 
         template<typename Format, typename... TArgs>
