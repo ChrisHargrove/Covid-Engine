@@ -64,6 +64,15 @@
     <ClInclude Include="src\Core\Graphics\DeviceBuilder.h">
       <Filter>Core\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="src\Core\Graphics\DeviceFeatures.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Graphics\SwapChain.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Graphics\SwapChainBuilder.h">
+      <Filter>Core\Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Application.cpp">
@@ -88,6 +97,12 @@
       <Filter>Core\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\Graphics\DeviceBuilder.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Graphics\SwapChain.cpp">
+      <Filter>Core\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Graphics\SwapChainBuilder.cpp">
       <Filter>Core\Graphics</Filter>
     </ClCompile>
   </ItemGroup>

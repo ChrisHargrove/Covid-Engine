@@ -59,6 +59,7 @@ namespace Covid
     {
         glfwWindowHint(GLFW_RESIZABLE, m_isResizeable);
         glfwWindowHint(GLFW_DECORATED, m_isDecorated);
+        glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
         m_window = new Window();
         if (m_isFullScreen)

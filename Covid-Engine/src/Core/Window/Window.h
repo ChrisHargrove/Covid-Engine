@@ -7,6 +7,7 @@
 #include "../Logger.h"
 #include "WindowBuilder.h"
 #include "../Input/InputBuilder.h"
+#include "../Graphics/DeviceBuilder.h"
 
 namespace Covid
 {
@@ -14,6 +15,8 @@ namespace Covid
     {
         friend WindowBuilder;
         friend InputBuilder;
+        friend Graphics::DeviceBuilder;
+        friend Graphics::SwapChainBuilder;
     
     private:
         Window();

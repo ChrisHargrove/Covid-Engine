@@ -2,6 +2,7 @@
 
 //TEMP
 #include "GLFW/glfw3.h"
+#include "vulkan/vulkan.h"
 
 using namespace Covid;
 
@@ -34,6 +35,12 @@ public:
             .SetApplicationName("Fluent Window")
             .SetApplicationVersion(0, 0, 1)
             .SetShowDeviceInfo(true)
+            .RequiresSwapChain()
+            .Build();
+
+        m_swapChain = Graphics::SwapChain::Create()
+            .SetWindow(m_window)
+            .SetDevice(m_device)
             .Build();
 
         m_time = new Time();
@@ -52,6 +59,7 @@ public:
     {
         delete m_time;
 
+        delete m_swapChain;
         delete m_device;
 
         delete m_input;

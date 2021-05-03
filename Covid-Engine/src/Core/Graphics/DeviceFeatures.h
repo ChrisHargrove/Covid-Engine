@@ -1,0 +1,66 @@
+#pragma once
+
+namespace Covid
+{
+    namespace Graphics
+    {
+        enum class DeviceFeature
+        {
+            RobustBufferAccess,
+            FullDrawIndexUint32,
+            ImageCubeArray,
+            IndependentBlend,
+            GeometryShader,
+            TesselationShader,
+            SampleRateShading,
+            DualSourceBlend,
+            LogicOp,
+            MultiDrawIndirect,
+            DrawIndirectFirstInstance,
+            DepthClamp,
+            DepthBiasClamp,
+            FillModeNonSolid,
+            DepthBounds,
+            WideLines,
+            LargePoints,
+            AlphaToOne,
+            MultiViewport,
+            SamplerAnisotropy,
+            TextureCompressionETC2,
+            TextureCompressionASTC_LDR,
+            TextureCompressionBC,
+            OcclusionQueryPrecise,
+            PipelineStatisticsQuery,
+            VertexPipelineStoresAnddAtomics,
+            FragmentStoresAndAtomics,
+            ShaderTessellationAndGeometryPointSize,
+            ShaderImageGatherExtended,
+            ShaderStorageImageExtendedFormats,
+            ShaderStorageImageMultisample,
+            ShaderStorageImageReadWithoutFormat,
+            ShaderStorageImageWriteWithoutFormat,
+            ShaderUniformBufferArrayDynamicIndexing,
+            ShaderSampledImageArrayDynamicIndexing,
+            ShaderStorageBufferArrayDynamicIndexing,
+            ShaderStorageImageArrayDynamicIndexing,
+            ShaderClipDistance,
+            ShaderCullDistance,
+            ShaderFloat64,
+            ShaderInt64,
+            ShaderInt16,
+            ShaderResourceResidency,
+            ShaderResourceMinLOD,
+            SparseBinding,
+            SparseResidencyBuffer,
+            SparseResidencyImage2D,
+            SparseResidencyImage3D,
+            SparseResidency2Samples,
+            SparseResidency4Samples,
+            SparseResidency8Samples,
+            SparseResidency16Samples,
+            SparseResidencyAliased,
+            VariableMultisampleRate,
+            InheritedQueries
+        };
+    }
+}

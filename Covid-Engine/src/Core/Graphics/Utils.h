@@ -161,6 +161,83 @@ namespace Covid
                 return createInfo;
             }
 
+            static std::string GetDeviceTypeName(VkPhysicalDeviceType type)
+            {
+                switch (type)
+                {
+                case VK_PHYSICAL_DEVICE_TYPE_OTHER:
+                    return "Other";
+                case VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU:
+                    return "Integrated GPU";
+                case VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU:
+                    return "Discrete GPU";
+                case VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU:
+                    return "Virtual GPU";
+                case VK_PHYSICAL_DEVICE_TYPE_CPU:
+                    return "CPU";
+                }
+                return "Unknown";
+            }
+
+            static void LogDeviceProperties(VkPhysicalDevice device)
+            {
+                VkPhysicalDeviceProperties properties;
+                vkGetPhysicalDeviceProperties(device, &properties);
+
+                VkPhysicalDeviceMemoryProperties memoryProps;
+                vkGetPhysicalDeviceMemoryProperties(device, &memoryProps);
+
+
+                Logger::EngineInfo("Selected GPU:");
+                Logger::EngineInfo("     Type:    {}", Utils::GetDeviceTypeName(properties.deviceType));
+                Logger::EngineInfo("     Name:    {}", properties.deviceName);
+
+                uint64_t totalMemory = 0;
+                for (uint32_t i = 0; i < memoryProps.memoryHeapCount; i++)
+                {
+                    VkMemoryHeap heap = memoryProps.memoryHeaps[i];
+                    if(heap.flags & VK_MEMORY_HEAP_DEVICE_LOCAL_BIT == VK_MEMORY_HEAP_DEVICE_LOCAL_BIT)
+                    {
+                        totalMemory += heap.size;
+                    }
+                }
+                int memoryGB = totalMemory / 1000000000;
+                Logger::EngineInfo("     VRAM:    {} GB", memoryGB);
+            }
+
+            static QueueFamilies FindQueueFamilies(VkPhysicalDevice device, VkSurfaceKHR surface)
+            {
+                QueueFamilies indices = QueueFamilies();
+
+                uint32_t queueFamilyCount = 0;
+                vkGetPhysicalDeviceQueueFamilyProperties(device, &queueFamilyCount, nullptr);
+
+                std::vector<VkQueueFamilyProperties> queueFamilies(queueFamilyCount);
+                vkGetPhysicalDeviceQueueFamilyProperties(device, &queueFamilyCount, queueFamilies.data());
+
+                for (int i = 0; i < queueFamilies.size(); i++)
+                {
+                    if (queueFamilies[i].queueFlags & VK_QUEUE_GRAPHICS_BIT)
+                    {
+                        indices.graphicsFamily = i;
+                    }
+
+                    VkBool32 presentSupport = false;
+                    vkGetPhysicalDeviceSurfaceSupportKHR(device, i, surface, &presentSupport);
+                    if (presentSupport)
+                    {
+                        indices.presentFamily = i;
+                    }
+
+                    if (indices.IsComplete())
+                    {
+                        break;
+                    }
+                }
+
+                return indices;
+            }
+
 
         };
     }

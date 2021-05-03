@@ -27,6 +27,7 @@ namespace Covid
         Time* m_time;
 
         Graphics::Device* m_device;
+        Graphics::SwapChain* m_swapChain;
     };
 
     //To be defined by the user.

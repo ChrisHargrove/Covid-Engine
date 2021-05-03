@@ -12,6 +12,8 @@ namespace Covid
         class Device
         {
             friend DeviceBuilder;
+            friend SwapChain;
+            friend SwapChainBuilder;
 
         private:
             Device();
@@ -24,7 +26,13 @@ namespace Covid
 
         private:
             VkInstance m_instance;
+            VkPhysicalDevice m_device;
+            VkDevice m_logicalDevice;
             VkDebugUtilsMessengerEXT m_debugMessenger;
+            VkSurfaceKHR m_surface;
+
+            VkQueue m_graphicsQueue;
+            VkQueue m_presentQueue;
         };
     }
 }

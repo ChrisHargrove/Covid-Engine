@@ -100,6 +100,9 @@
     <ClInclude Include="src\Core\EntryPoint.h" />
     <ClInclude Include="src\Core\Graphics\Device.h" />
     <ClInclude Include="src\Core\Graphics\DeviceBuilder.h" />
+    <ClInclude Include="src\Core\Graphics\DeviceFeatures.h" />
+    <ClInclude Include="src\Core\Graphics\SwapChain.h" />
+    <ClInclude Include="src\Core\Graphics\SwapChainBuilder.h" />
     <ClInclude Include="src\Core\Graphics\Utils.h" />
     <ClInclude Include="src\Core\Input\ButtonCodes.h" />
     <ClInclude Include="src\Core\Input\Input.h" />
@@ -117,6 +120,8 @@
     <ClCompile Include="src\Core\Application.cpp" />
     <ClCompile Include="src\Core\Graphics\Device.cpp" />
     <ClCompile Include="src\Core\Graphics\DeviceBuilder.cpp" />
+    <ClCompile Include="src\Core\Graphics\SwapChain.cpp" />
+    <ClCompile Include="src\Core\Graphics\SwapChainBuilder.cpp" />
     <ClCompile Include="src\Core\Input\Input.cpp" />
     <ClCompile Include="src\Core\Input\InputBuilder.cpp" />
     <ClCompile Include="src\Core\Logger.cpp" />
